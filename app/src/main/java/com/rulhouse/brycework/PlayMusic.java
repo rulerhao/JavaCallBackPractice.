@@ -7,7 +7,7 @@ public class PlayMusic {
 
     interface MusicStateListener {
         void onStart();
-        void onFinish();
+        void onFinished();
     }
 
     void setMusicStateListener(MusicStateListener musicStateListener) {
@@ -16,19 +16,19 @@ public class PlayMusic {
 
     void playMusic() {
         musicStateListener.onStart();
-        Thread playMusicThread = new Thread(new MockPlayingTask());
+        Thread playMusicThread = new Thread(playMusicTask);
         playMusicThread.start();
     }
 
-    class MockPlayingTask implements Runnable {
+    Runnable playMusicTask = new Runnable() {
         @Override
         public void run() {
             try {
                 Thread.sleep(time);
-                musicStateListener.onFinish();
+                musicStateListener.onFinished();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-    }
+    };
 }

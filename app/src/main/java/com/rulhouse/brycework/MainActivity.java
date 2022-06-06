@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onFinish() {
-            Log.d("TestPlayMusic", "onFinish");
+        public void onFinished() {
+            Log.d("TestPlayMusic", "onFinished");
         }
     };
 }
