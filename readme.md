@@ -1,7 +1,7 @@
 # 練習
 ##
 ### 目前專案內的內容
-打開 Logcat 看 TestPlayMusic 這個標籤顯示的內容，應該會在一開始出現 onStart，並在兩秒後出現 onFinish
+打開 Logcat 看 TestPlayMusic 這個標籤顯示的內容，應該會在一開始出現 onStart，並在兩秒後出現 onFinished
 
 ### 目標
 1. 把 playMusic 改成用 Button 來實現
